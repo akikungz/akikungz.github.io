@@ -5,9 +5,14 @@ on:
     branches:
       - main
 
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
 jobs:
-    build-deploy:
-        name: build-deploy
+    build:
+        name: build
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
@@ -28,6 +33,14 @@ jobs:
                 # Upload dist repository
                 path: './dist'
 
+    deploy:
+        environment: 
+            name: github-pages
+            url: ${{ steps.deployment.outputs.url }}
+        name: deploy
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v1
+              uses: actions/deploy-pages@v2
