@@ -36,11 +36,13 @@ jobs:
       - run: pnpm install
       - run: pnpm build
 
+      - name: Fix permissions
+        run: |
+            chmod -c -R +rX "_site/" | while read line; do
+            echo "::warning title=Invalid file permissions automatically fixed::$line"
+            done
+
       - uses: actions/upload-pages-artifact@v3
-        id: github-pages
-        with:
-          path: './dist'
-          name: github-pages
 
   deploy:
     name: Deploy to GitHub Pages
