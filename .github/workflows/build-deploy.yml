@@ -36,7 +36,7 @@ jobs:
       - run: pnpm install
       - run: pnpm build
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-pages-artifact@v3
         id: github-pages
         with:
           path: './dist'
