@@ -19,7 +19,7 @@ jobs:
       - uses: pnpm/action-setup@v3
         with:
           version: 8
-          run_install: true
+          run_install: false
 
       - name: Get pnpm store directory
         shell: bash
@@ -33,9 +33,11 @@ jobs:
           restore-keys: |
               ${{ runner.os }}-pnpm-store-
 
+      - run: pnpm install
       - run: pnpm build
 
       - uses: actions/upload-artifact@v4
+        name: github-pages
         with:
           path: './dist'
 
