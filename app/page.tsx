@@ -1,7 +1,6 @@
 "use client";
 import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaYoutubeSquare } from "react-icons/fa";
 import { _class } from "./func/class";
-import Image from "next/image";
 
 export default function Home() {
   return (
