@@ -4,7 +4,7 @@ import { _class } from "./func/class";
 
 export default function Home() {
   return (
-    <div className="w-screen min-h-screen bg-slate-950 px-2 py-4">
+    <div className="w-[100dvw] min-h-screen bg-slate-950 px-2 py-4">
       <div className={_class(
         "flex flex-col-reverse items-center justify-center md:flex-row md:items-start md:justify-start",
         "md:grid md:grid-cols-3 gap-2",
