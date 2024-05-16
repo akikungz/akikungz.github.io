@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
+import { _class } from "./func/class";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={_class(
+        inter.className,
+        "bg-slate-950"
+      )}>{children}</body>
     </html>
   );
 }
