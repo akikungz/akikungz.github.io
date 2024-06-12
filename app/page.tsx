@@ -1,8 +1,24 @@
 "use client";
+import { useSearchParams } from "next/navigation";
+
 import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaYoutubeSquare } from "react-icons/fa";
+
 import { _class } from "./func/class";
+import target from "./assets/link";
 
 export default function Home() {
+
+  const searchParams = useSearchParams();
+  const link = searchParams.get("link");
+
+  if (link) {
+    const url = (target as Record<string, unknown>)[link];
+
+    if (typeof url == "string") {
+      return window.location.href = url;
+    }
+  }
+
   return (
     <div className="w-[98dvw] min-h-screen px-2 py-4 mx-auto">
       <div className={_class(
