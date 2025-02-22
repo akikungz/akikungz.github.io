@@ -1,25 +1,13 @@
 "use client";
-import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
 import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaYoutubeSquare } from "react-icons/fa";
 
 import { _class } from "@/functions/class";
-import target from "@/assets/links";
+import { Suspense } from "react";
+import Link from "@/components/Link";
 
-export default function Home() {
-
-  const searchParams = useSearchParams();
-  const link = searchParams.get("link");
-
-  if (link) {
-    const url = (target as Record<string, unknown>)[link];
-
-    if (typeof url == "string") {
-      return window.location.href = url;
-    }
-  }
-
+function Home() {
   return (
     <div className="w-[98dvw] min-h-screen px-2 py-4 mx-auto">
       <div className={_class(
@@ -46,11 +34,6 @@ export default function Home() {
           </p>
         </div>
 
-        {/* <img
-          className="rounded-2xl w-48 h-48 md:w-full md:h-full object-cover"
-          src="https://avatars.githubusercontent.com/u/60536406"
-          alt="avatar"
-        /> */}
         <Image
           className="rounded-2xl w-48 h-48 md:w-full md:h-full object-cover"
           src="https://avatars.githubusercontent.com/u/60536406"
@@ -149,4 +132,12 @@ export default function Home() {
       </footer>
     </div>
   );
+}
+
+export default function Page() {
+  return (
+    <Suspense fallback={<Home />}>
+      <Link />
+    </Suspense>
+  )
 }
