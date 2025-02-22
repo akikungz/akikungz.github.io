@@ -1,5 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 import { FaFacebookSquare, FaGithubSquare, FaInstagramSquare, FaYoutubeSquare } from "react-icons/fa";
 
@@ -45,10 +46,17 @@ export default function Home() {
           </p>
         </div>
 
-        <img
+        {/* <img
           className="rounded-2xl w-48 h-48 md:w-full md:h-full object-cover"
           src="https://avatars.githubusercontent.com/u/60536406"
           alt="avatar"
+        /> */}
+        <Image
+          className="rounded-2xl w-48 h-48 md:w-full md:h-full object-cover"
+          src="https://avatars.githubusercontent.com/u/60536406"
+          alt="avatar"
+          width={192}
+          height={192}
         />
       </div>
 
