@@ -7,7 +7,7 @@ import { _class } from "@/functions/class";
 import { Suspense } from "react";
 import Link from "@/components/Link";
 
-export function Home() {
+export default function Home() {
   return (
     <div className="w-[98dvw] min-h-screen px-2 py-4 mx-auto">
       <div className={_class(
@@ -130,14 +130,10 @@ export function Home() {
           &copy; 2024 Thitipong Tapianthong
         </p>
       </footer>
+
+      <Suspense fallback={null}>
+        <Link />
+      </Suspense>
     </div>
   );
-}
-
-export default function Page() {
-  return (
-    <Suspense fallback={<Home />}>
-      <Link />
-    </Suspense>
-  )
 }

@@ -2,7 +2,6 @@
 import { useSearchParams } from "next/navigation";
 
 import target from "@/assets/links";
-import { Home } from "@/app/page";
 
 export default function Link() {
     const searchParams = useSearchParams();
@@ -20,5 +19,5 @@ export default function Link() {
         return <p>Link not found.</p>;
     }
     
-    return <Home />;
+    return null;
 }
