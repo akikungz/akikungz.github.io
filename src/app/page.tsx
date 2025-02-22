@@ -7,7 +7,7 @@ import { _class } from "@/functions/class";
 import { Suspense } from "react";
 import Link from "@/components/Link";
 
-function Home() {
+export function Home() {
   return (
     <div className="w-[98dvw] min-h-screen px-2 py-4 mx-auto">
       <div className={_class(

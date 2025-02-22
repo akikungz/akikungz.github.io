@@ -2,6 +2,7 @@
 import { useSearchParams } from "next/navigation";
 
 import target from "@/assets/links";
+import { Home } from "@/app/page";
 
 export default function Link() {
     const searchParams = useSearchParams();
@@ -11,11 +12,13 @@ export default function Link() {
         const url = (target as Record<string, unknown>)[link];
     
         if (typeof url == "string") {
-        return window.location.href = url;
+            window.location.href = url;
+            return <p>Redirecting...</p>;
         }
     
-        return window.location.href = "/";
+        window.location.href = "/";
+        return <p>Link not found.</p>;
     }
     
-    return null;
+    return <Home />;
 }

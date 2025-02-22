@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "@akikungz",
   description: "@akikungz profile page created with Next.js and Tailwind CSS",
+  icons: "/favicon.ico",
 };
 
 interface RootLayoutProps {
