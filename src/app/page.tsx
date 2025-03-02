@@ -14,16 +14,16 @@ export default function Home() {
       )}>
         <div className={_class(
           "mt-4 px-4 max-w-[720px] col-span-2 h-full",
-          "flex flex-col justify-center md:items-start text-slate-50"
+          "flex flex-col justify-center md:items-start"
         )}>
-          <h1 className="text-3xl font-bold text-slate-50">
+          <h1 className="text-3xl font-bold">
             Thitipong Tapianthong
           </h1>
-          <p className="text-left text-slate-50 mt-4">
+          <p className="text-left mt-4">
             Hello there! I'm Thitipong Tapianthong, a student in network engineering at King Mongkut's University of Technology North Bangkok.
           </p>
 
-          <p className="text-left text-slate-50 mt-4">
+          <p className="text-left mt-4">
             I'm interested in web development and programming. Mainly I use React, Next.js, and Tailwind CSS for my projects.
           </p>
         </div>
