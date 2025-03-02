@@ -5,7 +5,13 @@ const nextConfig: NextConfig = {
   output: "export",
   images: {
     unoptimized: true,
-  }
+  },
+  experimental: {
+    reactCompiler: true,
+  },
+  compiler: {
+    styledComponents: true,
+  },
 };
 
 export default nextConfig;

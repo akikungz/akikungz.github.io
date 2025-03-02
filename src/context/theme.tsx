@@ -21,13 +21,11 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     localStorage.setItem("theme", theme);
   }
 
-  const toggleTheme = () => {
-    setTheme((prev) => {
-      const next = prev === "dark" ? "light" : "dark";
-      localStorage.setItem("theme", next);
-      return next;
-    });
-  }
+  const toggleTheme = () => setTheme((prev) => {
+    const next = prev === "dark" ? "light" : "dark";
+    localStorage.setItem("theme", next);
+    return next;
+  });
 
   useEffect(() => {
     const localTheme = localStorage.getItem("theme") as ThemeContextProps['theme'];
@@ -43,10 +41,10 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
     media.addEventListener("change", (e) => {
       console.log(e);
-      setTheme(e.matches ? "dark" : "light");
+      handleTheme(e.matches ? "dark" : "light");
     });
 
-    return () => media.removeEventListener("change", () => { });
+    return () => media.removeEventListener("change", () => undefined);
   }, []);
 
   if (loading) return (
@@ -55,7 +53,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         <Loading />
       </body>
     </html>
-  )
+  );
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
