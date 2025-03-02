@@ -5,7 +5,6 @@ export interface Route {
 
 export const routes: Route[] = [
   { href: "/", children: "Home" },
-  // { href: "/projects", children: "Projects" },
-  // { href: "/blogs", children: "Blogs" },
+  { href: "/links", children: "Links" },
   { href: "/contact", children: "Contact" },
 ];
