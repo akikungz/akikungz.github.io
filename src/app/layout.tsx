@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 import { _class } from "@/functions/class";
+import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/context/theme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,11 +20,16 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
-    <html lang="en">
+    <ThemeProvider>
       <body className={_class(
         inter.className,
-        "bg-slate-950"
-      )}>{children}</body>
-    </html>
+        "dark:bg-[#0f0f0f] dark:text-white relative min-h-screen"
+      )}>
+        <Navbar />
+        <div className="w-full px-4 md:px-0 mx-auto container">
+          {children}
+        </div>
+      </body>
+    </ThemeProvider>
   );
 }
