@@ -42,11 +42,11 @@ export default function Navbar() {
                 {routes.map(({ ...route }, key) => <NavItem {...route} key={key} />)}
               </div>
 
-              <button onClick={toggleMenu} className="md:hidden text-2xl hover:text-pink-400">
+              <button onClick={toggleMenu} className="md:hidden text-2xl hover:text-pink-400 cursor-pointer">
                 { menuOpen ? <MdClose /> : <MdOutlineMenu /> }
               </button>
 
-              <button onClick={toggleTheme} className="text-2xl hover:text-pink-400 rounded-md">
+              <button onClick={toggleTheme} className="text-2xl hover:text-pink-400 cursor-pointer">
                 {theme == "dark" ? <MdLightMode /> : <MdOutlineDarkMode />}
               </button>
             </div>
@@ -54,14 +54,14 @@ export default function Navbar() {
         </div>
       </nav>
 
-      <div className={_class("fixed left-0 top-0 w-full h-full bg-slate-50/90 dark:bg-black/90 z-40", !menuOpen && "hidden")}>
+      <div className={_class("fixed left-0 top-0 w-full h-full bg-slate-300/90 dark:bg-black/90 z-40", !menuOpen && "hidden")}>
         <div className="container mx-auto px-4 pt-22">
           <div className="flex flex-col gap-2">
             {routes.map(({ ...route }, key) => 
               <NavItem 
                 {...route} 
                 key={key} 
-                className="text-center hover:bg-pink-300 hover:text-black p-2 rounded-md"
+                className="text-center hover:bg-pink-300 hover:text-black! p-2 rounded-md"
                 onClick={toggleMenu}
               />
             )}
