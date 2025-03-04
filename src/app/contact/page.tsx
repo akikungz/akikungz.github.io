@@ -4,7 +4,7 @@ export default function ContactPage() {
       <h1 className="text-4xl font-bold">Contact</h1>
       
       <p className="mt-4">
-        You can contact me via email at <a href="mailto:akikungz@outlook.me" className="text-blue-400" target="_blank">akikungz@outlook.me</a>
+        You can contact me via email at <a href="mailto:akikungz@outlook.com" className="text-blue-400" target="_blank">akikungz@outlook.com</a>
       </p>
 
       <div className="mt-4 flex flex-col gap-2">
