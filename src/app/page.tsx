@@ -1,13 +1,13 @@
 "use client";
-import Image from "next/image";
-
-import { _class, sortByDate } from "@/functions";
 import { Suspense } from "react";
+import Image from "next/image";
 
 import Link from "@/components/Link";
 import Project from "@/components/Project";
 
 import projects from "@/assets/projects";
+
+import { _class, sortByDate } from "@/functions";
 
 export default function Home() {
   return (
