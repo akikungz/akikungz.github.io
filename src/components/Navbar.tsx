@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { MdClose, MdLightMode, MdOutlineDarkMode, MdOutlineMenu } from "react-icons/md";
 
 import { ThemeContext } from "@/context/theme";
-import { _class } from "@/functions/class";
+import { _class } from "@/functions";
 import { routes } from "@/router";
 
 export default function Navbar() {

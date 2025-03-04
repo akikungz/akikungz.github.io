@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { _class } from '@/functions/class';
+import { _class } from '@/functions';
 
 export default async function NotFound() {
   return (
