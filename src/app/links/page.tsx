@@ -1,4 +1,4 @@
-import Links from "@/assets/links"
+import Links from "@/assets/links";
 
 export default function LinksPage() {
   return (
@@ -18,5 +18,5 @@ export default function LinksPage() {
         </ul>
       </div>
     </div>
-  )
+  );
 }
