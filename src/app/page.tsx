@@ -5,8 +5,9 @@ import { _class, sortByDate } from "@/functions";
 import { Suspense } from "react";
 
 import Link from "@/components/Link";
-import projects from "@/assets/projects";
 import Project from "@/components/Project";
+
+import projects from "@/assets/projects";
 
 export default function Home() {
   return (
