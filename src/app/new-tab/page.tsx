@@ -40,7 +40,7 @@ export default function NewTabPage() {
       const data = (await response.json()) as string[];
 
       setSearchResults(() =>
-        data.map((item: any, index) => ({ query: item, index })),
+        data.map((item: string, index) => ({ query: item, index })),
       );
       // Process search results
     } catch (error) {
@@ -152,7 +152,7 @@ export default function NewTabPage() {
                     index <= searchResults.length - 1
                   );
               })
-              .map((result, index) => (
+              .map((result) => (
                 <span
                   key={result.index}
                   className={_class(
