@@ -19,6 +19,10 @@ export const links: Link = {
     children:
       "Flowchart in Daily Life (Adjust the basics for students at IT Department KMUTNB@2024)",
   },
+  "flowchart-in-programming": {
+    href: "https://kmutnbacth-my.sharepoint.com/:p:/g/personal/s6506022620036_kmutnb_ac_th/EYdKiQXb4KFJpLydhWTTZCwB1a5syCjbYn6GGxd4S4rGrg",
+    children: "Flowchart in Programming (Adjust the basics for students at IT Department KMUTNB@2025)"
+  }
 };
 
 export default links;
