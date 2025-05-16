@@ -11,7 +11,7 @@ export default function Link() {
     const url = (target as Record<string, Record<string, string>>)[link];
 
     if (url) {
-      window.location.href = url[href];
+      window.location.href = url.href;
       return <p>Redirecting...</p>;
     }
 
