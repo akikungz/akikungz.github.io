@@ -10,8 +10,8 @@ export default function Link() {
   if (link) {
     const url = (target as Record<string, unknown>)[link];
 
-    if (typeof url == "string") {
-      window.location.href = url;
+    if (url && typeof url[href] == "string") {
+      window.location.href = url[href];
       return <p>Redirecting...</p>;
     }
 
